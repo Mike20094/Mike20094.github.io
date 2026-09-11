@@ -1,0 +1,48 @@
+/* Algemene opmaak */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+/* Container waarin je verticaal scrollt tussen de games */
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;        /* zorgt dat je kunt scrollen */
+    scroll-snap-type: y mandatory;  /* "klikt" vast op elke game */
+}
+
+/* Elke game is 1 volledig scherm, klikbaar als kaart */
+.game-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    scroll-snap-align: start;   /* stopt hier bij scrollen */
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Elke game een andere achtergrondkleur, zodat je ze onderscheidt */
+.game-card:nth-child(1) { background-color: #1b1b2f; }
+.game-card:nth-child(2) { background-color: #16213e; }
+.game-card:nth-child(3) { background-color: #0f3460; }
+.game-card:nth-child(4) { background-color: #533483; }
+
+.game-card:hover {
+    opacity: 0.85;
+}
