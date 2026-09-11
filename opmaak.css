@@ -1,48 +1,53 @@
 /* Algemene opmaak */
 body {
     margin: 0;
+    padding: 40px;              /* ruimte tussen de inhoud en de zijkanten van het scherm */
     font-family: Arial, sans-serif;
-}
-
-.intro {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #222;
-    color: white;
-}
-
-/* Container waarin je verticaal scrollt tussen de games */
-.scroll-container {
-    height: 100vh;
-    overflow-y: scroll;        /* zorgt dat je kunt scrollen */
-    scroll-snap-type: y mandatory;  /* "klikt" vast op elke game */
-}
-
-/* Elke game is 1 volledig scherm, klikbaar als kaart */
-.game-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    scroll-snap-align: start;   /* stopt hier bij scrollen */
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    background-color: #f2f2f2;
     box-sizing: border-box;
 }
 
-/* Elke game een andere achtergrondkleur, zodat je ze onderscheidt */
-.game-card:nth-child(1) { background-color: #1b1b2f; }
-.game-card:nth-child(2) { background-color: #16213e; }
-.game-card:nth-child(3) { background-color: #0f3460; }
-.game-card:nth-child(4) { background-color: #533483; }
+h1 {
+    text-align: center;
+}
 
-.game-card:hover {
-    opacity: 0.85;
+/* Het hoofdmenu: een raster van rechthoekige kaarten */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* zoveel kolommen als past */
+    gap: 24px;                  /* ruimte tussen de kaarten onderling */
+    max-width: 1000px;
+    margin: 0 auto;             /* centreert het raster, geeft ruimte aan de zijkanten */
+}
+
+/* Elke kaart is een rechthoek */
+.menu-kaart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    text-decoration: none;
+    color: #222;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+}
+
+.menu-kaart:hover {
+    transform: scale(1.03);
+}
+
+.menu-kaart img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;          /* zorgt dat de foto netjes in de rechthoek past */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-kaart h2 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
 }
