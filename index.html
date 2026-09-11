@@ -1,14 +1,37 @@
 
-<!DOCTYPE html> <!--dit is de homepage van mijn site, over mezelf-->
+<!DOCTYPE html> <!--dit is de homepage van mijn site, over mezelf en games-->
 <html> <!--dit is het html-element-->
     <head>
         <title>Mijn site - Home</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="opmaak.css">
     </head>
     <body>
-        <h1>Hoi, ik ben Mike Witteman</h1>
-        <p>Welkom op mijn website! Ik ben gek op Rocket League en wil hier wat over mezelf en over het spel vertellen.</p>
+        <div class="intro">
+            <h1>Hoi, ik ben [jouw naam]</h1>
+            <p>Welkom op mijn website! Scroll naar beneden om mijn favoriete games te bekijken.</p>
+        </div>
 
-        <a href="rocketleague.html">Bekijk mijn Rocket League pagina</a>
+        <div class="scroll-container"> <!--hier kun je verticaal doorheen scrollen-->
+            <a href="fortnite.html" class="game-card">
+                <h2>Fortnite</h2>
+                <p>Battle royale game waarin je als laatste probeert te overleven.</p>
+            </a>
+
+            <a href="rocketleague.html" class="game-card">
+                <h2>Rocket League</h2>
+                <p>Voetbal met raket-auto's, mijn favoriet!</p>
+            </a>
+
+            <a href="fallguys.html" class="game-card">
+                <h2>Fall Guys</h2>
+                <p>Chaotisch partygame vol hindernisbanen.</p>
+            </a>
+
+            <a href="unrealtournament.html" class="game-card">
+                <h2>Unreal Tournament</h2>
+                <p>Klassieke first-person shooter.</p>
+            </a>
+        </div>
     </body>
 </html>
