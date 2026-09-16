@@ -111,3 +111,14 @@ h1 {
 .dropdown:hover .dropdown-inhoud {
     display: block;
 }
+/* Achtergrond alleen voor de homepage */
+.home-pagina {
+    background: linear-gradient(135deg, #1b1b2f 0%, #16213e 40%, #0f3460 75%, #533483 100%);
+    background-attachment: fixed;   /* achtergrond blijft staan als je scrollt */
+    min-height: 100vh;
+}
+
+/* Zorg dat de titel goed leesbaar is op de donkere achtergrond */
+.home-pagina h1 {
+    color: white;
+}
