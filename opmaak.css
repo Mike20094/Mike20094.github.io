@@ -13,11 +13,13 @@ h1 {
 
 /* Het hoofdmenu: een raster van rechthoekige kaarten */
 .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* zoveel kolommen als past */
-    gap: 24px;                  /* ruimte tussen de kaarten onderling */
-    max-width: 1000px;
-    margin: 0 auto;             /* centreert het raster, geeft ruimte aan de zijkanten */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 16px;   /* ruimte tussen de kaarten en de zijkant van het scherm */
+    box-sizing: border-box;
 }
 
 /* Elke kaart is een rechthoek */
