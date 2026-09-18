@@ -11,15 +11,22 @@ h1 {
     text-align: center;
 }
 
-/* Het hoofdmenu: een raster van rechthoekige kaarten */
+/* Twee rechthoeken naast elkaar: Over mij en Epic Games */
 .menu-grid {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    max-width: 500px;
+    flex-direction: row;        /* naast elkaar in plaats van onder elkaar */
+    gap: 24px;                  /* ruimte tussen de twee rechthoeken */
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 16px;   /* ruimte tussen de kaarten en de zijkant van het scherm */
+    padding: 0 16px;            /* ruimte aan de zijkanten van het scherm */
     box-sizing: border-box;
+}
+
+/* Zorgt dat beide rechthoeken evenveel ruimte innemen */
+.menu-kaart-groot {
+    flex: 1;
+    min-height: 300px;
+    justify-content: center;
 }
 
 /* Elke kaart is een rechthoek */
