@@ -131,3 +131,38 @@ h1 {
 .home-pagina h1 {
     color: white;
 }
+/* Rij met kleine feitjes onder Over mij / Epic Games */
+.feiten-balk {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;            /* valt netjes terug op meerdere rijen op smalle schermen */
+    gap: 16px;
+    max-width: 900px;
+    margin: 24px auto 0 auto;   /* ruimte boven, gecentreerd zoals de rest */
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.feit-kaart {
+    flex: 1;
+    min-width: 140px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.feit-cijfer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #533483;             /* zelfde paarstint als je achtergrond-gradient */
+}
+
+.feit-label {
+    font-size: 13px;
+    color: #555;
+}
