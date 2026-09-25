@@ -168,7 +168,7 @@ h1 {
 }
 /* Video-vak bovenaan, boven Over mij / Epic Games */
 .video-vak {
-    max-width: 900px;
+    max-width: 1100px;      /* was 900px - breder vak */
     margin: 0 auto 24px auto;
     padding: 0 16px;
     box-sizing: border-box;
@@ -176,7 +176,7 @@ h1 {
 
 .video-vak iframe {
     width: 100%;
-    aspect-ratio: 16 / 9;   /* houdt de juiste videoverhouding aan, ongeacht de breedte */
+    aspect-ratio: 16 / 10;  /* was 16/9 - iets minder breed t.o.v. hoogte, dus visueel langer */
     border: none;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
