@@ -26,7 +26,7 @@ h1 {
 .menu-kaart-groot {
     flex: 1;
     min-height: 300px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 /* Elke kaart is een rechthoek */
