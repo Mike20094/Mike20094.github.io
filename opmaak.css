@@ -186,3 +186,13 @@ h1 {
 .navbar-huis {
     margin-left: auto;
 }
+.binair-decoratie {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    font-family: monospace;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.15);  /* heel subtiel, op de achtergrond */
+    z-index: -1;
+    letter-spacing: 2px;
+}
