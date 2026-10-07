@@ -273,3 +273,30 @@ h1 {
 .ai-pagina a {
     color: #d9c6ff;
 }
+/* Achtergrond voor de Epic Games pagina: donker, strak, diagonaal patroon */
+.epicgames-pagina {
+    background-color: #0a0a0a;
+    background-image: repeating-linear-gradient(
+        135deg,
+        #1a1a1a 0px,
+        #1a1a1a 2px,
+        #0a0a0a 2px,
+        #0a0a0a 30px
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.epicgames-pagina h1,
+.epicgames-pagina p {
+    color: white;
+}
+
+.epicgames-pagina a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.epicgames-pagina a:hover {
+    color: #cccccc;
+}
