@@ -254,3 +254,22 @@ h1 {
 .compressie-pagina a {
     color: #8fd3ff;
 }
+/* Achtergrond voor de AI pagina: neuraal netwerk-gevoel */
+.ai-pagina {
+    background-color: #533483;
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.12) 2px, transparent 2px),
+        linear-gradient(135deg, #16213e 0%, #533483 100%);
+    background-size: 40px 40px, 100% 100%;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.ai-pagina h1,
+.ai-pagina p {
+    color: white;
+}
+
+.ai-pagina a {
+    color: #d9c6ff;
+}
