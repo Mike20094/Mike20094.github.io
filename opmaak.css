@@ -232,3 +232,25 @@ h1 {
 .kleur-pagina a {
     color: #8fd3ff;
 }
+/* Achtergrond voor de Compressie pagina: gelaagd effect */
+.compressie-pagina {
+    background-color: #0f3460;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #1b1b2f 0px,
+        #1b1b2f 20px,
+        #16213e 20px,
+        #16213e 40px
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.compressie-pagina h1,
+.compressie-pagina p {
+    color: white;
+}
+
+.compressie-pagina a {
+    color: #8fd3ff;
+}
