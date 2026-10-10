@@ -333,3 +333,67 @@ h1 {
 .ivu-pagina a {
     color: #8fd3ff;
 }
+/* Container met alle uitleg-blokken: gecentreerd, met ruimte aan de zijkanten */
+.binair-inhoud {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;                  /* ruimte tussen de blokken */
+}
+
+/* Elk uitleg-blok is een rechthoek met een groen randje */
+.binair-blok {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #00ff46;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 0 12px rgba(0, 255, 70, 0.15);
+}
+
+.binair-blok h2 {
+    margin-top: 0;
+    color: #00ff46;
+}
+
+.binair-blok p,
+.binair-blok li {
+    color: #b3ffc2;
+    line-height: 1.6;
+}
+
+/* Binaire code in een eigen lettertype, zoals in een terminal */
+.binair-blok code {
+    font-family: monospace;
+    background-color: #0a2a12;
+    color: #00ff46;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Tabellen */
+.binair-tabel {
+    border-collapse: collapse;
+    margin: 12px auto;
+    font-family: monospace;
+}
+
+.binair-tabel th,
+.binair-tabel td {
+    border: 1px solid #00ff46;
+    padding: 8px 14px;
+    text-align: center;
+    color: #b3ffc2;
+}
+
+.binair-tabel th {
+    background-color: #0a2a12;
+    color: #00ff46;
+}
+
+.binair-terug {
+    text-align: center;
+    padding-bottom: 30px;
+}

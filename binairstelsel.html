@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="opmaak.css">
     </head>
-    <body>
+    <body class="binair-pagina">
         <nav class="navbar">
             <ul class="navbar-lijst">
                 <li class="dropdown">
@@ -14,15 +14,75 @@
                         <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
                         <li><a href="compressie.html">Compressie</a></li>
                         <li><a href="ai.html">AI</a></li>
+                        <li><a href="IVU.html">IVU</a></li>
                     </ul>
                 </li>
-                <li><a href="Epic games.html">Epic games</a></li>
+                <li><a href="overmij.html">Over mij</a></li>
                 <li class="navbar-huis"><a href="index.html">🏠</a></li> <!--huisje rechts, terug naar home-->
             </ul>
-            <body class="binair-pagina">
         </nav>
-        <p style="max-width: 700px; margin: 20px auto; text-align: center;">Uitleg over het binaire stelsel: hoe computers getallen opslaan met enen en nullen.</p>
+
+        <h1>Het binaire stelsel</h1>
+
+        <div class="binair-inhoud"> <!--container: houdt alle blokken netjes in het midden-->
+
+            <div class="binair-blok"> <!--blok 1: wat is binair?-->
+                <h2>Wat is het binaire stelsel?</h2>
+                <p>Een computer kent maar twee toestanden: er staat wel stroom op een draadje (aan) of er staat geen stroom op (uit). Daarom werkt een computer met slechts twee cijfers: <strong>0</strong> en <strong>1</strong>. Dit heet het <strong>binaire stelsel</strong> (bi = twee).</p>
+                <p>Wij gebruiken in het dagelijks leven het <strong>decimale stelsel</strong> met tien cijfers (0 t/m 9). Een computer telt hetzelfde, maar met alleen nullen en enen.</p>
+            </div>
+
+            <div class="binair-blok"> <!--blok 2: bits en bytes-->
+                <h2>Bits en bytes</h2>
+                <ul>
+                    <li>Een <strong>bit</strong> is één cijfer in het binaire stelsel: een 0 of een 1.</li>
+                    <li>Een <strong>byte</strong> is een groepje van 8 bits, bijvoorbeeld <code>01000001</code>.</li>
+                    <li>Met 8 bits kun je 2<sup>8</sup> = <strong>256</strong> verschillende waarden maken, van 0 t/m 255.</li>
+                </ul>
+                <p>Dat is precies waarom elk lampje van een pixel (rood, groen of blauw) 256 lichtsterktes heeft. Elke kleur wordt opgeslagen in één byte. Meer hierover staat op de pagina <a href="kleurmodellen.html">Kleurmodellen</a>.</p>
+            </div>
+
+            <div class="binair-blok"> <!--blok 3: tellen in binair-->
+                <h2>Tellen in binair</h2>
+                <p>Net als in het decimale stelsel begin je opnieuw met een extra positie als je alle cijfers hebt gehad. Na 9 komt 10, en in binair komt na 1 het getal 10 (spreek uit: één-nul, dat is twee).</p>
+                <table class="binair-tabel">
+                    <tr><th>Decimaal</th><th>Binair</th></tr>
+                    <tr><td>0</td><td>0000</td></tr>
+                    <tr><td>1</td><td>0001</td></tr>
+                    <tr><td>2</td><td>0010</td></tr>
+                    <tr><td>3</td><td>0011</td></tr>
+                    <tr><td>4</td><td>0100</td></tr>
+                    <tr><td>5</td><td>0101</td></tr>
+                    <tr><td>6</td><td>0110</td></tr>
+                    <tr><td>7</td><td>0111</td></tr>
+                    <tr><td>8</td><td>1000</td></tr>
+                </table>
+            </div>
+
+            <div class="binair-blok"> <!--blok 4: binair omrekenen naar decimaal-->
+                <h2>Van binair naar decimaal</h2>
+                <p>Elke positie in een binair getal heeft een waarde: de machten van 2. Van rechts naar links: 1, 2, 4, 8, 16, 32, 64, 128. Je telt de waarden op waar een 1 staat.</p>
+                <table class="binair-tabel">
+                    <tr><th>128</th><th>64</th><th>32</th><th>16</th><th>8</th><th>4</th><th>2</th><th>1</th></tr>
+                    <tr><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+                </table>
+                <p><strong>Voorbeeld:</strong> <code>00101101</code> = 32 + 8 + 4 + 1 = <strong>45</strong></p>
+            </div>
+
+            <div class="binair-blok"> <!--blok 5: decimaal omrekenen naar binair-->
+                <h2>Van decimaal naar binair</h2>
+                <p>Kijk welke waarden uit de rij (128, 64, 32, 16, 8, 4, 2, 1) je nodig hebt om het getal samen te stellen. Zet een 1 bij elke waarde die je gebruikt en een 0 bij de rest.</p>
+                <p><strong>Voorbeeld:</strong> het getal 13 = 8 + 4 + 1, dus <code>1101</code> (of als byte: <code>00001101</code>).</p>
+            </div>
+
+            <div class="binair-blok"> <!--blok 6: tekst in binair-->
+                <h2>Ook tekst bestaat uit nullen en enen</h2>
+                <p>Letters worden opgeslagen als getallen, en die getallen worden weer binair opgeslagen. In de ASCII-tabel heeft de letter A bijvoorbeeld het nummer 65, en dat is binair <code>01000001</code>.</p>
+                <p>Het woord "Hi" is dus: <code>01001000 01101001</code>. Hetzelfde geldt voor plaatjes, muziek en video: alles in een computer is uiteindelijk een rij nullen en enen.</p>
+            </div>
+
+            <p class="binair-terug"><a href="index.html">Terug naar Home</a></p>
+        </div>
     </body>
 </html>
-<body class="binair-pagina">
 
