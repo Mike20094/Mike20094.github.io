@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="opmaak.css">
     </head>
-    <body>
+    <body class="compressie-pagina">
         <nav class="navbar">
             <ul class="navbar-lijst">
                 <li class="dropdown">
@@ -13,16 +13,63 @@
                     <ul class="dropdown-inhoud">
                         <li><a href="binairstelsel.html">Binair stelsel</a></li>
                         <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                        <li><a href="compressie.html">Compressie</a></li>
                         <li><a href="ai.html">AI</a></li>
+                        <li><a href="ivu.html">IVU</a></li>
                     </ul>
                 </li>
-                <li><a href="Epic games.html">Epic games</a></li>
-                <li class="navbar-huis"><a href="index.html">🏠</a></li> <!--huisje rechts, terug naar home-->
+                <li><a href="overmij.html">Over mij</a></li>
+                <li class="navbar-huis"><a href="index.html">🏠</a></li>
             </ul>
         </nav>
 
         <h1>Compressie</h1>
-        <p style="max-width: 700px; margin: 20px auto; text-align: center;">Uitleg over compressie: hoe bestanden kleiner gemaakt worden om op te slaan of te versturen.</p>
+
+        <div class="uitleg-inhoud">
+
+            <div class="uitleg-blok"> <!--blok 1: wat is compressie-->
+                <h2>Wat is compressie?</h2>
+                <p><strong>Compressie</strong> betekent dat je een bestand kleiner maakt, zodat het minder bits en bytes nodig heeft. Het bestand neemt dan minder opslagruimte in beslag.</p>
+            </div>
+
+            <div class="uitleg-blok"> <!--blok 2: waarom-->
+                <h2>Waarom comprimeren we?</h2>
+                <ul>
+                    <li>Je kunt meer bestanden opslaan op dezelfde schijf of telefoon.</li>
+                    <li>Bestanden versturen en downloaden gaat sneller.</li>
+                    <li>Websites laden sneller, doordat afbeeldingen kleiner zijn.</li>
+                </ul>
+            </div>
+
+            <div class="uitleg-blok"> <!--blok 3: soorten-->
+                <h2>Twee soorten compressie</h2>
+                <ul>
+                    <li><strong>Verliesvrij:</strong> er gaat geen informatie verloren. Als je het bestand uitpakt, krijg je precies het origineel terug.</li>
+                    <li><strong>Met verlies:</strong> er wordt informatie weggelaten die je meestal niet opmerkt. Het bestand wordt veel kleiner, maar het origineel krijg je niet meer exact terug.</li>
+                </ul>
+            </div>
+
+            <div class="uitleg-blok"> <!--blok 4: voorbeeld-->
+                <h2>Een eenvoudig voorbeeld</h2>
+                <p>Een simpele manier om te comprimeren is herhalingen samenvatten. Neem deze rij letters:</p>
+                <p><code>AAAAAABBBCC</code> (11 tekens)</p>
+                <p>In plaats van elke letter op te schrijven, noteer je hoe vaak de letter achter elkaar voorkomt:</p>
+                <p><code>6A3B2C</code> (6 tekens)</p>
+                <p>Dezelfde informatie, maar korter. Dit heet <strong>run-length encoding</strong> en het is verliesvrij.</p>
+            </div>
+
+            <div class="uitleg-blok"> <!--blok 5: formaten-->
+                <h2>Bekende bestandsformaten</h2>
+                <table class="uitleg-tabel">
+                    <tr><th>Formaat</th><th>Soort bestand</th><th>Compressie</th></tr>
+                    <tr><td>ZIP</td><td>Alle soorten bestanden</td><td>Verliesvrij</td></tr>
+                    <tr><td>PNG</td><td>Afbeelding</td><td>Verliesvrij</td></tr>
+                    <tr><td>JPEG</td><td>Afbeelding (foto)</td><td>Met verlies</td></tr>
+                    <tr><td>MP3</td><td>Muziek</td><td>Met verlies</td></tr>
+                </table>
+            </div>
+
+            <p class="uitleg-terug"><a href="index.html">Terug naar Home</a></p>
+        </div>
     </body>
 </html>
-<body class="compressie-pagina">
