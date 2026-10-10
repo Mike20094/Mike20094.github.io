@@ -1,9 +1,9 @@
-/* Algemene opmaak */
+/* ===================== ALGEMEEN ===================== */
 body {
     margin: 0;
     padding: 40px;              /* ruimte tussen de inhoud en de zijkanten van het scherm */
     font-family: Arial, sans-serif;
-    background-color: #9a8888;
+    background-color: #f2f2f2;
     box-sizing: border-box;
 }
 
@@ -11,71 +11,22 @@ h1 {
     text-align: center;
 }
 
-/* Twee rechthoeken naast elkaar: Over mij en Epic Games */
-.menu-grid {
-    display: flex;
-    flex-direction: row;        /* naast elkaar in plaats van onder elkaar */
-    gap: 24px;                  /* ruimte tussen de twee rechthoeken */
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 16px;            /* ruimte aan de zijkanten van het scherm */
-    box-sizing: border-box;
-}
-
-/* Zorgt dat beide rechthoeken evenveel ruimte innemen */
-.menu-kaart-groot {
-    flex: 1;
-    min-height: 300px;
-    justify-content: flex-start;
-}
-
-/* Elke kaart is een rechthoek */
-.menu-kaart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(54, 87, 179);
-    border-radius: 12px;
-    padding: 24px;
-    text-decoration: none;
-    color: #8e7e7e;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    transition: transform 0.2s;
-}
-
-.menu-kaart:hover {
-    transform: scale(1.03);
-}
-
-.menu-kaart img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;          /* zorgt dat de foto netjes in de rechthoek past */
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.menu-kaart h2 {
-    margin: 0;
-    font-size: 18px;
-    text-align: center;
-}
-/* Navigatiebalk bovenaan */
+/* ===================== NAVIGATIEBALK ===================== */
 .navbar {
     background-color: #222;
     padding: 0 20px;
-    margin: -40px -40px 30px -40px; /* trekt de balk uit tegen de padding van body, zodat hij vol breed is */
+    margin: -40px -40px 30px -40px; /* trekt de balk over de volle breedte */
 }
 
 .navbar-lijst {
-    list-style-type: none;   /* geen bolletjes */
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;           /* menu-items naast elkaar */
+    display: flex;
 }
 
 .navbar-lijst > li {
-    position: relative;      /* nodig zodat het dropdownmenu er goed onder valt */
+    position: relative;         /* zodat het dropdownmenu er goed onder valt */
 }
 
 .navbar-lijst > li > a {
@@ -89,7 +40,12 @@ h1 {
     background-color: #444;
 }
 
-/* Het uitklapmenu, standaard verborgen */
+/* Huisje helemaal rechts in de balk */
+.navbar-huis {
+    margin-left: auto;
+}
+
+/* Uitklapmenu, standaard verborgen */
 .dropdown-inhoud {
     display: none;
     position: absolute;
@@ -103,6 +59,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     border-radius: 0 0 8px 8px;
     overflow: hidden;
+    z-index: 10;
 }
 
 .dropdown-inhoud li a {
@@ -116,29 +73,107 @@ h1 {
     background-color: #f2f2f2;
 }
 
-/* Laat het menu zien zodra je over 'Epic Games' hovert */
+/* Menu tonen als je over het hamburger-icoontje hovert */
 .dropdown:hover .dropdown-inhoud {
     display: block;
 }
-/* Achtergrond alleen voor de homepage */
+
+/* ===================== HOMEPAGE ===================== */
 .home-pagina {
     background: linear-gradient(135deg, #1b1b2f 0%, #16213e 40%, #0f3460 75%, #533483 100%);
-    background-attachment: fixed;   /* achtergrond blijft staan als je scrollt */
+    background-attachment: fixed;
     min-height: 100vh;
 }
 
-/* Zorg dat de titel goed leesbaar is op de donkere achtergrond */
 .home-pagina h1 {
     color: white;
 }
-/* Rij met kleine feitjes onder Over mij / Epic Games */
+
+/* Video-vak, gecentreerd */
+.video-vak {
+    max-width: 700px;
+    margin: 0 auto 24px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.video-vak iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: block;
+}
+
+/* Twee rechthoeken naast elkaar: Over mij en Onderwerpen */
+.menu-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;                  /* ruimte tussen de twee vakken */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px;            /* ruimte aan de zijkanten */
+    box-sizing: border-box;
+}
+
+.menu-kaart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    color: #222;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+}
+
+.menu-kaart:hover {
+    transform: scale(1.03);
+}
+
+.menu-kaart img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-kaart h2 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.menu-kaart-groot {
+    flex: 1;
+    min-height: 300px;
+    justify-content: center;
+}
+
+/* Alleen bij Over mij: inhoud bovenaan beginnen */
+.kaart-boven {
+    justify-content: flex-start;
+}
+
+.menu-kaart-groot p {
+    text-align: left;
+    font-size: 14px;
+    color: #444;
+    margin-top: 8px;
+}
+
+/* Rij met 3 feitjes onder de grote vakken */
 .feiten-balk {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;            /* valt netjes terug op meerdere rijen op smalle schermen */
+    flex-wrap: wrap;
     gap: 16px;
     max-width: 900px;
-    margin: 24px auto 0 auto;   /* ruimte boven, gecentreerd zoals de rest */
+    margin: 24px auto 0 auto;
     padding: 0 16px;
     box-sizing: border-box;
 }
@@ -159,93 +194,48 @@ h1 {
 .feit-cijfer {
     font-size: 20px;
     font-weight: bold;
-    color: #533483;             /* zelfde paarstint als je achtergrond-gradient */
+    color: #533483;
 }
 
 .feit-label {
     font-size: 13px;
     color: #555;
 }
-/* Video-vak bovenaan, boven Over mij / Epic Games */
-.video-vak {
-    max-width: 900px;       /* nog breder dan de vorige 1100px */
-    margin: 0 auto 24px auto; /* 0 auto = automatisch gecentreerd, links en rechts */
-    padding: 0 16px;
-    box-sizing: border-box;
-}
 
-.video-vak iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;    /* terug naar de normale verhouding, dus niet vervormd */
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    display: block;
-}
-/* Duwt het huisje helemaal naar rechts in de navbar */
-.navbar-huis {
-    margin-left: auto;
-}
-/* Achtergrond speciaal voor de Binair stelsel pagina */
+/* ===================== ACHTERGRONDEN PER PAGINA ===================== */
+
+/* Binair stelsel: groen op zwart */
 .binair-pagina {
     background-color: #000000;
-    background-image:
-        repeating-linear-gradient(
-            90deg,
-            rgba(0, 255, 70, 0.08) 0px,
-            rgba(0, 255, 70, 0.08) 1px,
-            transparent 1px,
-            transparent 40px
-        );
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(0, 255, 70, 0.08) 0px,
+        rgba(0, 255, 70, 0.08) 1px,
+        transparent 1px,
+        transparent 40px
+    );
     background-attachment: fixed;
     min-height: 100vh;
 }
 
-.binair-pagina h1 {
-    color: #00ff46;   /* fel groen voor de titel */
-}
-
-.binair-pagina p {
-    color: #b3ffc2;   /* zachter groen, beter leesbaar voor lopende tekst */
-}
-
-.binair-pagina a {
-    color: #00ff46;
-    font-weight: bold;
-}
-
-/* Tekst leesbaar maken op de donkere achtergrond */
-.binair-pagina h1,
-.binair-pagina p {
-    color: white;
-}
-
-.binair-pagina a {
-    color: #8fd3ff;   /* lichtblauw, goed leesbaar op donkere achtergrond */
-}
-/* Achtergrond voor de Kleurmodellen pagina: RGB-thema */
+/* Kleurmodellen: RGB-thema (accentkleur lichtblauw) */
 .kleur-pagina {
+    --accent: #8fd3ff;
     background-color: #16213e;
-    background-image: linear-gradient(135deg,
-        rgba(255, 0, 0, 0.15) 0%,
-        rgba(0, 255, 0, 0.15) 33%,
-        rgba(0, 0, 255, 0.15) 66%,
-        #16213e 100%
-    ), linear-gradient(135deg, #1b1b2f 0%, #16213e 100%);
+    background-image:
+        linear-gradient(135deg,
+            rgba(255, 0, 0, 0.15) 0%,
+            rgba(0, 255, 0, 0.15) 33%,
+            rgba(0, 0, 255, 0.15) 66%,
+            #16213e 100%),
+        linear-gradient(135deg, #1b1b2f 0%, #16213e 100%);
     background-attachment: fixed;
     min-height: 100vh;
 }
 
-.kleur-pagina h1,
-.kleur-pagina p {
-    color: white;
-}
-
-.kleur-pagina a {
-    color: #8fd3ff;
-}
-/* Achtergrond voor de Compressie pagina: gelaagd effect */
+/* Compressie: gelaagd patroon (accentkleur geel) */
 .compressie-pagina {
+    --accent: #ffd166;
     background-color: #0f3460;
     background-image: repeating-linear-gradient(
         45deg,
@@ -258,16 +248,9 @@ h1 {
     min-height: 100vh;
 }
 
-.compressie-pagina h1,
-.compressie-pagina p {
-    color: white;
-}
-
-.compressie-pagina a {
-    color: #8fd3ff;
-}
-/* Achtergrond voor de AI pagina: neuraal netwerk-gevoel */
+/* AI: stippen als neuraal netwerk (accentkleur lila) */
 .ai-pagina {
+    --accent: #d9c6ff;
     background-color: #533483;
     background-image:
         radial-gradient(rgba(255, 255, 255, 0.12) 2px, transparent 2px),
@@ -277,15 +260,20 @@ h1 {
     min-height: 100vh;
 }
 
-.ai-pagina h1,
-.ai-pagina p {
-    color: white;
+/* IVU: donkerblauw met raster (accentkleur turquoise) */
+.ivu-pagina {
+    --accent: #7ee8c7;
+    background-color: #0f3460;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(135deg, #1b1b2f 0%, #0f3460 60%, #16213e 100%);
+    background-size: 40px 40px, 40px 40px, 100% 100%;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
-.ai-pagina a {
-    color: #d9c6ff;
-}
-/* Achtergrond voor de Epic Games pagina: donker, strak, diagonaal patroon */
+/* Epic Games: zwart met diagonaal patroon */
 .epicgames-pagina {
     background-color: #0a0a0a;
     background-image: repeating-linear-gradient(
@@ -312,39 +300,56 @@ h1 {
 .epicgames-pagina a:hover {
     color: #cccccc;
 }
-/* Achtergrond voor de IVU pagina: donkerblauw met een subtiel raster */
-.ivu-pagina {
-    background-color: #0f3460;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(135deg, #1b1b2f 0%, #0f3460 60%, #16213e 100%);
-    background-size: 40px 40px, 40px 40px, 100% 100%;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
 
-/* Tekst leesbaar maken op de donkere achtergrond */
-.ivu-pagina h1,
-.ivu-pagina p {
-    color: white;
-}
+/* ===================== GEDEELD: BINAIR + UITLEGPAGINA'S ===================== */
 
-.ivu-pagina a {
-    color: #8fd3ff;
-}
-/* Container met alle uitleg-blokken: gecentreerd, met ruimte aan de zijkanten */
-.binair-inhoud {
+/* Container met de blokken: gecentreerd, ruimte aan de zijkanten en tussen de blokken */
+.binair-inhoud,
+.uitleg-inhoud {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 16px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 24px;                  /* ruimte tussen de blokken */
+    gap: 24px;
 }
 
-/* Elk uitleg-blok is een rechthoek met een groen randje */
+/* Terug-naar-home link onderaan */
+.binair-terug,
+.uitleg-terug {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* Tabellen: gedeelde basis */
+.binair-tabel,
+.uitleg-tabel {
+    border-collapse: collapse;
+    margin: 12px auto;
+}
+
+.binair-tabel th,
+.binair-tabel td,
+.uitleg-tabel th,
+.uitleg-tabel td {
+    padding: 8px 14px;
+    text-align: center;
+}
+
+/* Code-stukjes: gedeelde basis */
+.binair-blok code,
+.uitleg-blok code {
+    font-family: monospace;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* ===================== BINAIR STELSEL (groen-zwart) ===================== */
+.binair-pagina h1 {
+    color: #00ff46;
+}
+
 .binair-blok {
     background-color: rgba(0, 0, 0, 0.7);
     border: 1px solid #00ff46;
@@ -364,27 +369,24 @@ h1 {
     line-height: 1.6;
 }
 
-/* Binaire code in een eigen lettertype, zoals in een terminal */
-.binair-blok code {
-    font-family: monospace;
-    background-color: #0a2a12;
+.binair-blok a,
+.binair-terug a {
     color: #00ff46;
-    padding: 2px 6px;
-    border-radius: 4px;
+    font-weight: bold;
 }
 
-/* Tabellen */
+.binair-blok code {
+    background-color: #0a2a12;
+    color: #00ff46;
+}
+
 .binair-tabel {
-    border-collapse: collapse;
-    margin: 12px auto;
     font-family: monospace;
 }
 
 .binair-tabel th,
 .binair-tabel td {
     border: 1px solid #00ff46;
-    padding: 8px 14px;
-    text-align: center;
     color: #b3ffc2;
 }
 
@@ -393,7 +395,49 @@ h1 {
     color: #00ff46;
 }
 
-.binair-terug {
-    text-align: center;
-    padding-bottom: 30px;
+/* ===================== KLEURMODELLEN, COMPRESSIE, AI, IVU ===================== */
+.kleur-pagina h1,
+.compressie-pagina h1,
+.ai-pagina h1,
+.ivu-pagina h1 {
+    color: white;
+}
+
+.uitleg-blok {
+    background-color: rgba(0, 0, 0, 0.55);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.uitleg-blok h2 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.uitleg-blok p,
+.uitleg-blok li {
+    color: white;
+    line-height: 1.6;
+}
+
+.uitleg-blok a,
+.uitleg-terug a {
+    color: var(--accent);
+}
+
+.uitleg-blok code {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.uitleg-tabel th,
+.uitleg-tabel td {
+    border: 1px solid var(--accent);
+    color: white;
+}
+
+.uitleg-tabel th {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
 }
