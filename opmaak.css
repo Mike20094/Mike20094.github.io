@@ -312,3 +312,24 @@ h1 {
 .epicgames-pagina a:hover {
     color: #cccccc;
 }
+/* Achtergrond voor de IVU pagina: donkerblauw met een subtiel raster */
+.ivu-pagina {
+    background-color: #0f3460;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(135deg, #1b1b2f 0%, #0f3460 60%, #16213e 100%);
+    background-size: 40px 40px, 40px 40px, 100% 100%;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Tekst leesbaar maken op de donkere achtergrond */
+.ivu-pagina h1,
+.ivu-pagina p {
+    color: white;
+}
+
+.ivu-pagina a {
+    color: #8fd3ff;
+}
